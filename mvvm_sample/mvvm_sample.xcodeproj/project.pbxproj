@@ -13,6 +13,11 @@
 		DE3E21E1273071F700AF57FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3E21DF273071F700AF57FE /* Main.storyboard */; };
 		DE3E21E3273071F800AF57FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3E21E2273071F800AF57FE /* Assets.xcassets */; };
 		DE3E21E6273071F800AF57FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3E21E4273071F800AF57FE /* LaunchScreen.storyboard */; };
+		DE3E21F2273072A500AF57FE /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E21F1273072A500AF57FE /* Employee.swift */; };
+		DE3E21F4273072DC00AF57FE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E21F3273072DC00AF57FE /* APIService.swift */; };
+		DE3E21F72730731900AF57FE /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E21F62730731900AF57FE /* EmployeeViewModel.swift */; };
+		DE3E21F92731029D00AF57FE /* EmployeeTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E21F82731029D00AF57FE /* EmployeeTableViewDataSource.swift */; };
+		DE3E21FC273103AE00AF57FE /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3E21FB273103AE00AF57FE /* EmployeeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		DE3E21E2273071F800AF57FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE3E21E5273071F800AF57FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE3E21E7273071F800AF57FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3E21F1273072A500AF57FE /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		DE3E21F3273072DC00AF57FE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DE3E21F62730731900AF57FE /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		DE3E21F82731029D00AF57FE /* EmployeeTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewDataSource.swift; sourceTree = "<group>"; };
+		DE3E21FB273103AE00AF57FE /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,68 @@
 		DE3E21D8273071F700AF57FE /* mvvm_sample */ = {
 			isa = PBXGroup;
 			children = (
-				DE3E21D9273071F700AF57FE /* AppDelegate.swift */,
-				DE3E21DB273071F700AF57FE /* SceneDelegate.swift */,
-				DE3E21DD273071F700AF57FE /* ViewController.swift */,
+				DE3E21FA2731038E00AF57FE /* TableViewCells */,
+				DE3E21F02730728400AF57FE /* APIService */,
+				DE3E21F5273072FA00AF57FE /* ViewModels */,
+				DE3E21EF2730727800AF57FE /* Models */,
+				DE3E21ED2730722F00AF57FE /* Common */,
+				DE3E21EE2730725B00AF57FE /* Controllers */,
 				DE3E21DF273071F700AF57FE /* Main.storyboard */,
 				DE3E21E2273071F800AF57FE /* Assets.xcassets */,
 				DE3E21E4273071F800AF57FE /* LaunchScreen.storyboard */,
 				DE3E21E7273071F800AF57FE /* Info.plist */,
 			);
 			path = mvvm_sample;
+			sourceTree = "<group>";
+		};
+		DE3E21ED2730722F00AF57FE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E21D9273071F700AF57FE /* AppDelegate.swift */,
+				DE3E21DB273071F700AF57FE /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DE3E21EE2730725B00AF57FE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E21DD273071F700AF57FE /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DE3E21EF2730727800AF57FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E21F1273072A500AF57FE /* Employee.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DE3E21F02730728400AF57FE /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E21F3273072DC00AF57FE /* APIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		DE3E21F5273072FA00AF57FE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E21F62730731900AF57FE /* EmployeeViewModel.swift */,
+				DE3E21F82731029D00AF57FE /* EmployeeTableViewDataSource.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DE3E21FA2731038E00AF57FE /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DE3E21FB273103AE00AF57FE /* EmployeeTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3E21F92731029D00AF57FE /* EmployeeTableViewDataSource.swift in Sources */,
+				DE3E21FC273103AE00AF57FE /* EmployeeTableViewCell.swift in Sources */,
 				DE3E21DE273071F700AF57FE /* ViewController.swift in Sources */,
+				DE3E21F4273072DC00AF57FE /* APIService.swift in Sources */,
+				DE3E21F2273072A500AF57FE /* Employee.swift in Sources */,
 				DE3E21DA273071F700AF57FE /* AppDelegate.swift in Sources */,
+				DE3E21F72730731900AF57FE /* EmployeeViewModel.swift in Sources */,
 				DE3E21DC273071F700AF57FE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
